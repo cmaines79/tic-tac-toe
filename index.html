@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <header class="container">
+        <div class="title">
+            <h1>TIC-PAC-TOE</h1>
+        </div>
+        <div class="pick-player-character">
+            <div class="pick-player-text">
+                <h2>Pick your avatar</h2>
+            </div>
+            <div class="characters">
+                <div class="ghost-pick">
+                    <button id="ghost-blue" class="ghost-btn active">
+                        <img src="/images/ghost_blue.svg" alt="blue ghost">
+                    </button>
+                    <button id="ghost-red" class="ghost-btn inactive">
+                        <img src="/images/ghost_red.svg" alt="blue ghost">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="game-board glass container">
+        <div>
+            <div id="0" class="board right bottom"></div>
+            <div id="1" class="board right bottom"></div>
+            <div id="2" class="board bottom"></div>
+        </div>
+
+        <div>
+            <div id="3" class="board right bottom"></div>
+            <div id="4" class="board right bottom"></div>
+            <div id="5" class="board bottom"></div>
+        </div>
+
+        <div>
+            <div id="6" class="board right"></div>
+            <div id="7" class="board right"></div>
+            <div id="8" class="board"></div>
+        </div>
+    </section>
+
+    <section class="gameOver">
+        <h2 id='game-over-h2'>Game Over, you lose!</h2>
+        <img src="./images/gameOver_red.svg" alt="">
+        <button id="play-again">Play Again!</button>
+
+    </section>
+
+    <footer class="container">
+
+    </footer>
+    
+</body>
+</html>

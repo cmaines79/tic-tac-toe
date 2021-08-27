@@ -1,0 +1,192 @@
+:root {
+    --board-width: 250px;
+    --board-height: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/pac_man.jpeg);
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.container {
+    max-width: 75rem;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+/* START HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+header .title h1{
+    color:  white;
+    letter-spacing: 1rem;
+    font-size: 4rem;
+}
+
+.pick-player-character {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.pick-player-text {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: .7rem;
+}
+
+.characters {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+
+.ghost-pick {
+    display: flex;
+    justify-content: center;
+}
+
+.ghost-btn {
+    margin: 20px;
+    display: flex;
+    width: 147px;
+    background: transparent;
+    border: none;
+    border-radius: 2rem;
+    padding: 20px;
+}
+
+.ghost-btn:hover {
+    cursor: pointer;
+    background: #f8ffe8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f8ffe8 0%, #e3f5ab 33%, #b7df2d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#b7df2d',GradientType=0 ); /* IE6-9 */
+}
+
+.active {
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* END HEADER */
+
+
+/* START GAME-BOARD */
+.game-board{
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 3.125rem;
+    background-color: lightgrey;
+    padding: 1.25rem;
+}
+
+.glass {
+    background: white;
+    background: linear-gradient(rgba(255, 255, 255, .7),rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    box-shadow: 10px, 10px, 5px rgba(255, 255, 255, .7);
+    backdrop-filter: blur(2rem);
+}
+
+.game-board div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.ghost {
+    width: 60%;
+    height: auto;
+}
+
+.board {
+    width: var(--board-width);
+    height: var(--board-height);
+}
+
+.board:hover {
+    cursor: pointer;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.right {
+    border-right: 5px solid red;
+}
+
+.bottom {
+    border-bottom: 5px solid red;
+}
+/* END GAME-BOARD */
+
+
+/* START GAME OVER */
+.gameOver {
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -300px;
+    padding: 50px;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 30px rgb(220, 216, 216);
+}
+
+.gameOver h2 {
+    color: black;
+    text-align: center;
+}
+
+.gameOver img{
+    width: 400px;
+    height: auto;
+}
+
+.gameOver button {
+    width: 100%;
+    height: 40px;
+}
+/* END GAME OVER */
